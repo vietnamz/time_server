@@ -55,17 +55,7 @@ export CMAKE_CPP_COMPILER=/usr/bin/g++-10
 ```
 
 Please have a look in the setenv.sh for details
-### Docker build
 
-start the docker machine.
-```shell script
-docker-compose up -d
-```
-
-Stop the machine
-````shell script
-docker-compose down -v
-````
 
 ### Testing websocket
 

@@ -5,7 +5,7 @@ import sys, getopt
 
 print ("The script has the name %s" % (sys.argv[0]))
 
-short_options = "h:"
+short_options = "h:p:"
 try:
     opts, args = getopt.getopt(sys.argv[1:], short_options)
 except getopt.GetoptError:
@@ -13,11 +13,15 @@ except getopt.GetoptError:
     sys.exit(2)
 
 
-host = None
+host = "localhost"
+port = 8081
 for opt, arg in opts:
     if opt == '-h':
         print("arg = " + arg)
         host = arg
+    elif opt == '-p':
+        print("arg = " + arg)
+        port = arg
     else:
         sys.exit(1)
 
@@ -43,7 +47,7 @@ def on_open(ws):
 
 if __name__ == "__main__":
     websocket.enableTrace(True)
-    ws = websocket.WebSocketApp("ws://{}:8081".format(host),
+    ws = websocket.WebSocketApp("ws://{}:{}".format(host, port),
                               on_open = on_open,
                               on_message = on_message,
                               on_error = on_error,
