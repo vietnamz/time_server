@@ -86,7 +86,7 @@ namespace ott
                 std::stringstream ss;
                 ss << current_date_microseconds;
                 std::cout << "call get() ss.str() " << ss.str() << "\n" ;
-                std::cout << "call get() " << _coroutine.promise().current_time << "\n";
+                //std::cout << "call get() " << _coroutine.promise().current_time << "\n";
                 return ss.str();
 
                 /*

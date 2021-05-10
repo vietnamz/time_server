@@ -52,9 +52,9 @@ The script above will build the whole code base. But You need to make sure gcc a
 ````shell script
 export CMAKE_C_COMPILER=/usr/bin/gcc-10
 export CMAKE_CPP_COMPILER=/usr/bin/g++-10
-````
+```
 
-Please have a look in the setenv.sh for detaul
+Please have a look in the setenv.sh for details
 ### Docker build
 
 start the docker machine.
@@ -67,6 +67,9 @@ Stop the machine
 docker-compose down -v
 ````
 
+### Testing websocket
+
+please take a look in the script folder for details.
 
 #### TODO:
 

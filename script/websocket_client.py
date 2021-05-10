@@ -1,4 +1,27 @@
 import websocket
+import sys, getopt
+
+
+
+print ("The script has the name %s" % (sys.argv[0]))
+
+short_options = "h:"
+try:
+    opts, args = getopt.getopt(sys.argv[1:], short_options)
+except getopt.GetoptError:
+    print("python websocket_client.py -h <hostname>")
+    sys.exit(2)
+
+
+host = None
+for opt, arg in opts:
+    if opt == '-h':
+        print("arg = " + arg)
+        host = arg
+    else:
+        sys.exit(1)
+
+print("host = " + host)
 try:
     import thread
 except ImportError:
@@ -17,18 +40,10 @@ def on_close(ws):
 
 def on_open(ws):
     print("on open")
-    #def run(*args):
-    #    while True:
-    #        time.sleep(1)
-    #        ws.send("Hello ")
-    #    time.sleep(1)
-    #    ws.close()
-    #    print("thread terminating...")
-    #thread.start_new_thread(run, ())
 
 if __name__ == "__main__":
     websocket.enableTrace(True)
-    ws = websocket.WebSocketApp("ws://localhost:8081/",
+    ws = websocket.WebSocketApp("ws://{}:8081".format(host),
                               on_open = on_open,
                               on_message = on_message,
                               on_error = on_error,
