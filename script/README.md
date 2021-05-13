@@ -2,16 +2,16 @@
 ### This script was used to test the websocket
 
 
-``
+```
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python websocket_client.py
-``
+```
 
 output
 
-``
+```
 --- request header ---
 GET / HTTP/1.1
 Upgrade: websocket
@@ -20,8 +20,6 @@ Origin: http://localhost:8081
 Sec-WebSocket-Key: oh0ERqCGk2jm/JtzxRqT0w==
 Sec-WebSocket-Version: 13
 Connection: Upgrade
-
-
 -----------------------
 --- response header ---
 HTTP/1.1 101 Switching Protocols
@@ -96,5 +94,5 @@ on message
 ^C
 send: b'\x88\x82O\xa0M\xe5LH'
 ^C### closed ###
-``
+```
 
