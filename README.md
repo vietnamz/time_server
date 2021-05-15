@@ -17,7 +17,7 @@
  |---| --- | ---| 
  |window | no | false| 
  |Ubuntu 18.04 | yes | true| 
- |MacOS | yes | true| 
+ |MacOS | yes | No| 
 
 
 ## Build
@@ -67,5 +67,5 @@ please take a look in the script folder for details.
 1. Support ssl
 2. Combine websocket and http into once port. Right now, I think separating the http and websocket would be easy to scale independently.
 ( Sample: https://github.com/boostorg/beast/tree/1da229a27c6f0539d422bcedbcf47cfe2517164a/example/advanced )
-3. Combine the share login between http and websocket into one library.
+3. Combine the share logic between http and websocket into one library.
 
