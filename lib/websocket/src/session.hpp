@@ -30,9 +30,10 @@ namespace ott
             beast::websocket::stream<beast::tcp_stream> ws_;
             beast::flat_buffer buffer_;
             std::string time_;
-            timer t;
+            //timer t;
         public:
             explicit session(tcp::socket&& socket);
+            virtual ~session() noexcept;
             virtual void run();
             virtual void on_run();
             virtual void on_accept(beast::error_code ec);

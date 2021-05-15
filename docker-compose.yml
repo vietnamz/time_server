@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  http_server:
+    image: ott/http_server
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - TF_DEV=true
+    # export G_ID=$(id -g $(whoami))
+    # export U_ID=$(id -g $(whoami))
+    user: ${U_ID:-0}:${G_ID:-0}
+    tty: true
+    working_dir: /opt/ott
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    command: ["./build/lib/http/http_server"]
+  websocket_server:
+    image: ott/websocket_server
+    build:
+        context: ./
+        dockerfile: docker/Dockerfile
+    ports:
+        - "8081:8081"
+    environment:
+        - TF_DEV=true
+    # export G_ID=$(id -g $(whoami))
+    # export U_ID=$(id -g $(whoami))
+    user: ${U_ID:-0}:${G_ID:-0}
+    tty: true
+    working_dir: /opt/ott
+    cap_add:
+        - SYS_PTRACE
+    security_opt:
+        - seccomp:unconfined
+    command: ["./build/lib/websocket/web_socket"]

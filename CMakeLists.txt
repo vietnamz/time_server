@@ -11,7 +11,6 @@ if(DEFINED ENV{OTT_ROOT})
     set( OTT_FLAGS $ENV{OTT_ROOT})
 endif()
 
-
 message("OTT_ROOT : D${OTT_ROOT}")
 if(OTT_ROOT)
     message("D${OTT_ROOT} is well defined")

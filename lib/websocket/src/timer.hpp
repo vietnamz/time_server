@@ -48,8 +48,9 @@ namespace ott
             {
                 if(_coroutine) {
                     std::cout << "call timer destructor \n";
-                    _coroutine.destroy();
-                    _coroutine = nullptr;
+                    //! Why ?
+                    //_coroutine.destroy();
+                   // _coroutine = nullptr;
                 }
             }
             timer() {

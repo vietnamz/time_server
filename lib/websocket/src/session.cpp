@@ -54,10 +54,13 @@ namespace ott
             //! start timer corouting
 
         }
+        session::~session() {
+            std::cout << "session destructor\n";
+        }
         void session::do_schedule()
         {
             std::cout << "start session on_schedule " << std::this_thread::get_id() << std::endl;
-            t = make_timer();
+            timer t = make_timer();
             time_ = t.get();
             //do_read();
             ws_.text(ws_.got_text());
