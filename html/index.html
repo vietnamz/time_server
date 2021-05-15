@@ -27,6 +27,7 @@ ws.onmessage = function (evt) {
     const date = received_msg.substring(0, received_msg.indexOf(" "));
     const time = received_msg.substring(received_msg.indexOf(" ") + 1, received_msg.length);
     console.log(date + " " + time);
+    var hh = time.split(".");
     console.log("Message is received..." + received_msg);
 };
 
