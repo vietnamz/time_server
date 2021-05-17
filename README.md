@@ -49,7 +49,7 @@ There is a script to build the whole code base, just simply typing
 
 The script above will build the whole code base. But You need to make sure gcc and g++ that ship with your machine support c++10, othewise you have to export two variable environment below:
 
-````shell script
+```shell script
 export CMAKE_C_COMPILER=/usr/bin/gcc-10
 export CMAKE_CPP_COMPILER=/usr/bin/g++-10
 ```
