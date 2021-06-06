@@ -69,4 +69,6 @@ please take a look in the script folder for details.
 ( Sample: https://github.com/boostorg/beast/tree/1da229a27c6f0539d422bcedbcf47cfe2517164a/example/advanced )
 3. Combine the share logic between http and websocket into one library.
 4. Make it combine thing out
-4. Something wrong with the current code, sow we need to ensure it gone
+5. Something wrong with the current code, sow we need to ensure it gone
+6. adding web socket
+
