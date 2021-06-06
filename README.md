@@ -17,7 +17,7 @@
  |---| --- | ---| 
  |window | no | false| 
  |Ubuntu 18.04 | yes | true| 
- |MacOS | yes | No| 
+ 
 
 
 ## Build
