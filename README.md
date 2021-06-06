@@ -1,6 +1,5 @@
 # Simple Time server which support http and websocket.
 
-Ok
 
 ## Toolchain and libraries
 
