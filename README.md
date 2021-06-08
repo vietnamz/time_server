@@ -1,6 +1,5 @@
 # Simple Time server which support http and websocket.
 
-Ok
 
 ## Toolchain and libraries
 
@@ -69,4 +68,5 @@ please take a look in the script folder for details.
 2. Combine websocket and http into once port. Right now, I think separating the http and websocket would be easy to scale independently.
 ( Sample: https://github.com/boostorg/beast/tree/1da229a27c6f0539d422bcedbcf47cfe2517164a/example/advanced )
 3. Combine the share logic between http and websocket into one library.
-
+4. Make it combine thing out
+4. Something wrong with the current code, sow we need to ensure it gone
